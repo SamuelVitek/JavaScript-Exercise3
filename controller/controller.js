@@ -1,3 +1,6 @@
+// window.onload = alert('Please view the image of my screen in the repository.\n' +
+//     'I have recommended resolution 125% and I don\'t trust it to be the same on different pc.');
+
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 

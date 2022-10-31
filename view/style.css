@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    overflow: hidden;
+    /*background: linear-gradient(to right, rgba(15, 214, 79, 0.5), rgba(248, 239, 66, 0.5));*/
+}
+
+main {
+    padding-top: 2rem;
+}
+
+.main-row {
+    height: 95%;
+
+}
+
+canvas {
+    background-color: lightgray;
+    max-width: 100%;
+}
+
+aside {
+    background-color: dodgerblue;
+}
+
+.main-title {
+    color: #fff;
+    text-shadow: 0 0 2px grey;
+    font-family: 'Dosis', sans-serif;
+}
+

@@ -1,3 +1,4 @@
+//Getting all necessary elements as constants
 const overlay = document.getElementsByClassName('modal-backdrop');
 const addBtn = document.getElementById('add');
 const close = document.getElementsByClassName('close-popup');
@@ -12,6 +13,7 @@ let cardTitles;
 let lastCol;
 let id = 1;
 
+//Event listeners to handle button actions attached to the modal window
 Array.from(close).forEach(btn => {
     btn.addEventListener('click', hideModal)
 });
@@ -19,6 +21,7 @@ form.addEventListener('submit', handleForm);
 addBtn.addEventListener('click', openModal);
 submit.addEventListener('click', saveRow);
 
+//Function to save a row to the local storage
 function saveRow() {
     if (question.value !== '') {
         localStorage.setItem(id.toString(),
@@ -32,6 +35,11 @@ function saveRow() {
     }
 }
 
+/**
+ * Function to reload the UI and draw everything (not filtered) from the local storage
+ * Done by creating set of elements used in Bootstrap cards
+ * Filling the content in the cards by the data saved in local storage
+ */
 function updateUI() {
     const col = document.createElement('div');
     col.classList.add('col-sm-4');
@@ -69,10 +77,12 @@ function updateUI() {
     cardTitles = document.getElementsByClassName('card-title');
 }
 
+//Stops the Bootstraps modal window from its default actions
 function handleForm(event) {
     event.preventDefault();
 }
 
+//Hides modal window
 function hideModal() {
     question.value = '';
     category.value = 'HTML';
@@ -82,6 +92,7 @@ function hideModal() {
     });
 }
 
+//Opens modal window
 function openModal() {
     addBtn.removeAttribute('data-bs-toggle');
     modal.style.display = 'block';
@@ -90,4 +101,5 @@ function openModal() {
     });
 }
 
+//On refresh, cleans the local storage
 window.onload = localStorage.clear();

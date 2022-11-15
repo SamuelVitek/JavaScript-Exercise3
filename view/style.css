@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* Default settings */
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +22,7 @@ main {
     padding-right: 0;
 }
 
+/* Specific styles */
 aside {
     width: 50%;
     height: 100%;
@@ -41,15 +43,13 @@ aside {
     background-color: #32cd32;
 }
 
-
-
 .main-title {
     color: #fff;
     text-shadow: 0 0 2px grey;
     font-family: 'Dosis', sans-serif;
 }
 
-.row>*,
+.row > *,
 .container {
     padding-left: 0;
     padding-right: 0;

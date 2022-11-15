@@ -17,12 +17,23 @@ body {
 }
 
 main {
-    padding-top: 2rem;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-.main-row {
-    height: 95%;
-    border-radius: 5px;
+aside {
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    float: right;
+    box-shadow: 0 0 7px grey;
+}
+
+#canvas {
+    width: 50%;
+    height: 100%;
 }
 
 .btn-success {
@@ -30,11 +41,7 @@ main {
     background-color: #32cd32;
 }
 
-aside {
-    padding-left: 5rem;
-    padding-right: 5rem;
-    box-shadow: 0 0 10px grey;
-}
+
 
 .main-title {
     color: #fff;
@@ -42,3 +49,8 @@ aside {
     font-family: 'Dosis', sans-serif;
 }
 
+.row>*,
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}

@@ -10,49 +10,47 @@
     <link rel="stylesheet" href="view/style.css">
 </head>
 <body>
-    <main class="container h-100">
-        <div class="row main-row justify-content-between">
-            <canvas id="canvas" class="col-5">
+    <main class="h-100">
+        <canvas id="canvas">
 
-            </canvas>
-            <aside class="col-5 rounded text-center">
-                <button id="add" type="button" class="btn btn-success btn-lg col-8 mb-3 mt-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Save emoji</button>
+        </canvas>
+        <aside class="text-center">
+            <button id="add" type="button" class="btn btn-success btn-lg col-8 mb-3 mt-5 mb-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Save emoji</button>
 
-                <!-- Modal -->
-                <div class="modal fade mt-4" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Ask your question</h5>
-                                <button type="button" class="close-popup btn-close"  aria-label="Close"></button>
-                            </div>
-                            <form id="form" class="modal-body">
-                                <div class="mb-3">
-                                    <label for="category" class="form-label">Choose a category</label>
-                                    <select id="category" class="col-2 form-control" aria-label="Default select example">
-                                        <option value="HTML" selected>HTML</option>
-                                        <option value="CSS">CSS</option>
-                                        <option value="JS">JavaScript</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="question" class="form-label">Question</label>
-                                    <textarea id="question" class="form-control" placeholder="Ask your question."></textarea>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="close-popup btn btn-secondary" >Cancel</button>
-                                    <button id="submit" type="submit" class="btn btn-primary">Save</button>
-                                </div>
-                            </form>
+            <!-- Modal -->
+            <div class="modal fade mt-4" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Ask your question</h5>
+                            <button type="button" class="close-popup btn-close"  aria-label="Close"></button>
                         </div>
+                        <form id="form" class="modal-body">
+                            <div class="mb-3">
+                                <label for="category" class="form-label">Choose a category</label>
+                                <select id="category" class="col-2 form-control" aria-label="Default select example">
+                                    <option value="HTML" selected>HTML</option>
+                                    <option value="CSS">CSS</option>
+                                    <option value="JS">JavaScript</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="question" class="form-label">Question</label>
+                                <textarea id="question" class="form-control" placeholder="Ask your question."></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="close-popup btn btn-secondary" >Cancel</button>
+                                <button id="submit" type="submit" class="btn btn-primary">Save</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
+            </div>
 
-                <div id="main-row" class="row text-center mb-4">
-                    <!--      Code is put here dynamically      -->
-                </div>
-            </aside>
-        </div>
+            <div id="main-row" class="row text-center mb-4">
+                <!--      Code is put here dynamically      -->
+            </div>
+        </aside>
     </main>
 
     <script src="controller/output.js" type="text/javascript"></script>

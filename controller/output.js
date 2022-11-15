@@ -34,7 +34,7 @@ function saveRow() {
 
 function updateUI() {
     const col = document.createElement('div');
-    col.classList.add('col-sm-3');
+    col.classList.add('col-sm-4');
     col.classList.add('column');
     col.id = 'col-' + id;
 

@@ -16,20 +16,6 @@ let rectangles = [];
 context.fillStyle = 'green';
 context.shadowBlur = 0;
 
-window.addEventListener('change', () => {
-    // canWidth = canvas.width;
-    // canHeight = canvas.height;
-    //
-    // centerX = canWidth / 2;
-    // centerY = canHeight / 2;
-    //
-    // scaleWidth = window.innerWidth / canWidth;
-    // scaleHeight = window.innerHeight / canHeight;
-    //
-    // scale = Math.min(scaleHeight, scaleWidth);
-})
-
-//Row 1
 for (let i = 0; i < 8; i++) {
     for (let j = 0; j < 8; j++) {
         let recX = offsetX + sizeSpaceX + (j * (sizeSpaceX * 2));
@@ -50,22 +36,25 @@ rectangles.forEach(function(rectangle) {
 })
 
 canvas.addEventListener('click', function(event) {
-    const elemLeft = offsetX + canvas.clientLeft;
-    const elemTop = offsetY + canvas.clientTop;
-
-    let mouseX = event.pageX - elemLeft;
-    let mouseY = event.pageY - elemTop;
+    let mouseX = event.pageX - offsetX;
+    let mouseY = event.pageY - offsetY;
 
     rectangles.forEach(function(element) {
         if (mouseY > element.top && mouseY < element.top + element.height
             && mouseX > element.left && mouseX < element.left + element.width) {
 
-            console.log(element.top + element.height);
+            console.log('FUUUUU')
+
+            if (element.color !== 'green') {
+                drawRect(element.left, element.top, element.width, element.height, 'green');
+            } else {
+                drawRect(element.left, element.top, element.width, element.height, 'blue');
+            }
         }
     });
 })
 
-function drawRect(x, y, color) {
+function drawRect(x, y, width, height, color) {
     context.fillStyle = color;
-    context.fillRect(x, y, 25, 12.5);
+    context.fillRect(x, y, width, height);
 }
